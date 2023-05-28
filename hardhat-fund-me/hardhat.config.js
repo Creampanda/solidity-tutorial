@@ -1,3 +1,5 @@
+const { version } = require("chai");
+
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 require("@nomiclabs/hardhat-etherscan");
@@ -23,7 +25,9 @@ module.exports = {
       chainId: 31337,
     },
   },
-  solidity: "0.8.18",
+  solidity: {
+    compilers: [{ version: "0.8.18" }, { version: "0.6.6" }],
+  },
   etherscan: {
     apiKey: ETHERSCAN_API_KEY,
   },

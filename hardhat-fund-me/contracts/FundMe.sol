@@ -29,11 +29,6 @@ contract FundMe {
         funders.push(msg.sender);
     }
     
-    function getVersion() public view returns (uint256){
-        // ETH/USD price feed address of Sepolia Network.
-        return priceFeed.version();
-    }
-    
     modifier onlyOwner {
         // require(msg.sender == owner);
         if (msg.sender != i_owner) revert NotOwner();
