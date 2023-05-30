@@ -35,13 +35,13 @@ contract FundMe {
         priceFeed = AggregatorV3Interface(priceFeedAddress);
     }
 
-    receive() external payable {
-        fund();
-    }
+    // receive() external payable {
+    //     fund();
+    // }
 
-    fallback() external payable {
-        fund();
-    }
+    // fallback() external payable {
+    //     fund();
+    // }
 
     /**
      * @notice This functions funds this contract
